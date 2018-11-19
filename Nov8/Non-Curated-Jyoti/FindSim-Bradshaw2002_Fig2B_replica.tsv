@@ -1,0 +1,82 @@
+Experiment metadata		
+transcriber	Nisha Ann Viswan	
+organization	NCBS	
+emailId	nishaav@ncbs.res.in	
+exptSource	Paper	
+citationId	PMID: 11925447	
+authors	Bradshaw JM et al.	
+journal	J Biol Chem, 2002	
+		
+		
+		
+Experiment context		
+exptType	TimeSeries	
+species	in vitro	
+cell-types		
+temperature (Celsius)	0	
+Include pathway	Ca,CaM,CaMKII	
+details	Fig 2B	
+notes		
+		
+		
+Stimuli		
+timeUnits	sec	
+quantityUnits	uM	
+entities	CaM	
+field	conc	
+Data		
+Time	Value	
+0	10	
+		
+		
+Readouts		
+timeUnits	sec	
+quantityUnits	ratio	
+useXlog	FALSE	
+useYlog	FALSE	
+ratioReferenceTime	0	
+ratioReferenceEntities	CaMKII	
+ratioReferenceDose	0	
+entities	CaMKII_thr286	
+field	conc	
+settleTime	0	
+useNormalization	FALSE	
+Data		
+Time	Value	stderr
+2	0.145	0.05
+3	0.08	0.03
+5	0.138	0.052
+7	0.32	0.145
+10	0.212	0.057
+13	0.48	0.12
+15	0.43	0.07
+17	0.465	0.185
+20	0.46	0.077
+23	0.53	0.125
+25	0.6	0.18
+30	0.45	0.155
+35	0.52	0.33
+40	0.77	0.22
+		
+		
+		
+		
+		
+		
+Model mapping		
+modelSource	DOQCS	
+fileName		
+citationId		
+citation		
+authors		
+modelSubset	kinetics/Ca,kinetics/CaM,kinetics/CaMKII	
+modelLookup	CaM:CaM/CaM,CaMKII_thr286:CaMKII_thr286_p_CaM,CaMKII:CaMKII/CaMKII	
+scoringFormula	abs((expt-sim)/(expt+sim+1e-9))	
+itemstodelete	CaM(Ca)n_CaNAB,CaNAB_Ca4,CaMKIII_bind_CaM_Ca4,neurogranin,neurogranin_CaM,neurogranin_p,neurogranin_bind_CaM,dephosph_neurogranin	
+solver	Runge kutta method (gsl)	
+notes		
+parameterChange		
+Object	DOQCS	Value
+Ca/Ca	concInit	0.0005
+CaMKII/CaMKII	concInit	0.000000046
+Ca/Ca	isBuffered	1

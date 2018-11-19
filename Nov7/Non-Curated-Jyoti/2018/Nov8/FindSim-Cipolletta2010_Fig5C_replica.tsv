@@ -1,0 +1,70 @@
+Experiment metadata		
+transcriber	Nisha Ann Viswan	
+organization	NCBS	
+emailId	nishaav@ncbs.res.in	
+exptSource	Paper	
+citationId	PMID: 20392834	
+authors	Cipolletta E et al.	
+journal	Endocrinology, 2010	
+		
+		
+		
+Experiment context		
+exptType	TimeSeries	
+species	in vitro	
+cell-types	purified proteins	
+temperature (Celsius)	30	
+Include pathway	Ca,CaM,CaMKII	
+details	Fig 5C	
+notes		
+		
+		
+Stimuli		
+timeUnits	sec	
+quantityUnits	uM	
+entities	CaM	
+field	conc	
+Data		
+Time	Value	
+0	1	
+		
+		
+Readouts		
+timeUnits	sec	
+quantityUnits	pM	
+useXlog	FALSE	
+useYlog	FALSE	
+ratioReferenceTime	0	
+ratioReferenceEntities		
+ratioReferenceDose	0	
+entities	CaMKII_thr286	
+field	conc	
+settleTime	0	
+useNormalization	FALSE	
+Data		
+Time	Value	stderr
+0	26.28	0
+30	31.91	0
+60	45.05	0
+120	75.08	0
+300	168.92	26.28
+600	304.05	0
+		
+		
+		
+		
+Model mapping		
+modelSource	DOQCS	
+fileName		
+citationId		
+citation		
+authors		
+modelSubset	kinetics/Ca,kinetics/CaM,kinetics/CaMKII	
+modelLookup	CaM:CaM/CaM,CaMKII_thr286:CaMKII_thr286_p_CaM	
+scoringFormula	abs((expt-sim)/(expt+sim+1e-9))	
+itemstodelete	CaM(Ca)n_CaNAB,CaNAB_Ca4,CaMKIII_bind_CaM_Ca4,neurogranin,neurogranin_CaM,neurogranin_p,neurogranin_bind_CaM,dephosph_neurogranin	
+solver	Runge kutta method (gsl)	
+notes		
+parameterChange		
+Object	parameter	Value
+Ca/Ca	concInit	1
